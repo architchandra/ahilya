@@ -1,0 +1,20 @@
+{
+  "name": "ahilya",
+  "version": "1.0.0",
+  "description": "Ahilya is a simple (yet sturdy) Eleventy based blog starter project that uses Forestry as a CMS. Inspired by Andy Bell's [Hylia starter kit](https://github.com/hankchizljaw/hylia).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/architchandra/ahilya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/architchandra/ahilya/issues"
+  },
+  "homepage": "https://github.com/architchandra/ahilya#readme"
+}
