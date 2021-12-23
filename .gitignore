@@ -1,6 +1,9 @@
 # Packages
 node_modules
 
+# Robots
+**/robots.txt
+
 # Code Editor Config
 .code
 
