@@ -1,0 +1,9 @@
+# Packages
+node_modules
+
+# Code Editor Config
+.code
+
+# OS Files
+.DS_Store
+Thumbs.db
