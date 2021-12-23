@@ -1,7 +1,6 @@
 module.exports = function (config) {
-  config.addPassthroughCopy({ 'src/assets/media': 'media' });
-  config.addPassthroughCopy({ 'src/assets/icons': 'icons' });
-  config.addPassthroughCopy({ 'src/assets/admin': 'admin'});
+  config.addPassthroughCopy({ 'src/_assets/media': 'media' });
+  config.addPassthroughCopy({ 'src/_assets/icons': 'icons' });
   
   // Check the robots.txt file before deploying to production
   config.addPassthroughCopy('src/robots.txt');
