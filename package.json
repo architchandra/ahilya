@@ -1,10 +1,13 @@
 {
   "name": "ahilya",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Ahilya is a simple (yet sturdy) Eleventy based blog starter project that uses Forestry as a CMS. Inspired by Andy Bell's [Hylia starter kit](https://github.com/hankchizljaw/hylia).",
-  "main": "index.js",
+  "main": "index.md",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch:eleventy": "eleventy --quiet --serve",
+    "start": "npm-run-all --parallel watch:*",
+    "preview": "npm run watch:eleventy",
+    "deploy": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/architchandra/ahilya#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "npm-run-all": "^4.1.5"
   }
 }
