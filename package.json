@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/architchandra/ahilya/issues"
   },
-  "homepage": "https://github.com/architchandra/ahilya#readme"
+  "homepage": "https://github.com/architchandra/ahilya#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
