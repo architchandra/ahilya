@@ -12,43 +12,6 @@ fields:
   config:
     required: false
   label: Intro
-- name: panel
-  type: field_group
-  config: {}
-  fields:
-  - name: image1
-    type: file
-    config:
-      maxSize: 16
-    label: Extreme Left
-    description: Hidden on mobile screens.
-  - name: image2
-    type: file
-    config:
-      maxSize: 16
-    label: Centre Left
-    description: Hidden on mobile screens.
-  - name: image3
-    type: file
-    config:
-      maxSize: 16
-    label: Centre
-    description: Shown on mobile screens.
-  - name: image4
-    type: file
-    config:
-      maxSize: 16
-    label: Centre Right
-    description: Hidden on mobile screens.
-  - name: image5
-    type: file
-    config:
-      maxSize: 16
-    label: Extreme Right
-    description: Hidden on mobile screens.
-  label: Image Panel
-  description: Only the centre image will be shown on mobile screens (the rest will
-    be hidden).
 - name: title
   type: text
   config:
