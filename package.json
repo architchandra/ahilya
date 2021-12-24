@@ -5,7 +5,7 @@
   "main": "index.md",
   "scripts": {
     "watch:eleventy": "eleventy --quiet --serve",
-    "watch:tailwind": "tailwind -i src/_assets/css/main.css -c src/_assets/css/tailwind.config.js --postcss -o public/build/style.css --watch",
+    "watch:tailwind": "tailwind -i src/_assets/css/main.css -c src/_assets/css/tailwind.config.js --postcss -o web/build/style.css --watch",
     "start": "npm-run-all --parallel watch:*",
     "preview": "npm run watch:eleventy",
     "deploy": "eleventy"
