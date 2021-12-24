@@ -1,0 +1,72 @@
+---
+layout: layouts/base
+---
+
+
+
+<article class="container prose my-8 text-center">
+  {% if heading %}
+    <h2 class="title-home mb-4">
+      {{ heading }}
+    </h2>
+  {% endif %}
+
+  {% if intro %}
+    <p class="font-title">
+      {{ intro }}
+    </p>
+  {% endif %}
+</article>
+
+<div class="xs:flex justify-between items-center gap-x-4 my-12 sm:my-16" aria-hidden="true">
+  {% set panelColumnsList = [{
+    image: panel.image1,
+    class: 'hidden xs:block aspect-w-1 aspect-h-1 rounded-md rounded-l-none',
+    containerClass: 'xs:w-1/6'
+  },{
+    image: panel.image2,
+    class: 'hidden xs:block aspect-w-9 aspect-h-16 rounded-md',
+    containerClass: 'xs:w-1/6'
+  },{
+    image: panel.image3,
+    class: 'aspect-w-3 aspect-h-4 xs:aspect-w-9 xs:aspect-h-14 rounded-md',
+    containerClass: 'xs:w-1/4'
+  },{
+    image: panel.image4,
+    class: 'hidden xs:block aspect-w-9 aspect-h-16 rounded-md',
+    containerClass: 'xs:w-1/6'
+  },{
+    image: panel.image5,
+    class: 'hidden xs:block aspect-w-1 aspect-h-1 rounded-md rounded-r-none',
+    containerClass: 'xs:w-1/6'
+  }] %}
+
+  {# No alt text since images are for decoration purpose
+  https://www.w3.org/WAI/tutorials/images/decorative/ #}
+  {% for column in panelColumnsList %}
+    <div class="{{ column.containerClass }} px-6 xs:px-0">
+      <div class="{{ column.class }} bg-cover overflow-hidden flex-none bg-brand-black" style="background-image: url('..{{- column.image -}}')">
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% set homeEntries = collections.activities|reverse %}
+{% if homeEntries|length %}
+  <article class="container max-w-prose my-20 sm:my-24">
+    <h2 class="title-h2 mb-8 text-center">
+      Latest Activities
+    </h2>
+
+    {% set listerParams = {
+      entries: homeEntries,
+      class: 'mb-8',
+      limit: 5
+    } %}
+    {% include 'components/lister.njk' %}
+
+    <a class="inline-block pr-7h title-h4 uppercase icon icon-arrow-right bg-almost-right-top bg-h-5 hover:bg-right-top transition-all duration-300" href="/blog">
+      See more blog posts
+    </a>
+  </article>
+{% endif %}
