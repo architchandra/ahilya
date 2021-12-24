@@ -1,9 +1,8 @@
 ---
 layout: views/detail/home
-heading: We help transform lives.
-intro: " Our mission is to educate the masses and uplift the poorest of the poor.Our
-  efforts have led to the creation of schools in Banswara and Tribal Areas of North
-  East India, and orphanages for girls in Haridwar."
+heading: Create robust blog websites easily.
+intro: Inmensae subtilitatis, obscuris et malesuada fames. Nec dubitamus multa iter
+  quae et nos invenerat.
 panel:
   image1: ''
   image2: ''
