@@ -5,6 +5,7 @@
   "main": "index.md",
   "scripts": {
     "watch:eleventy": "eleventy --quiet --serve",
+    "watch:tailwind": "tailwind -i src/_assets/css/main.css -c src/_assets/css/tailwind.config.js --postcss -o public/build/style.css --watch",
     "start": "npm-run-all --parallel watch:*",
     "preview": "npm run watch:eleventy",
     "deploy": "eleventy"
@@ -22,6 +23,9 @@
   "homepage": "https://github.com/architchandra/ahilya#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "npm-run-all": "^4.1.5"
+    "autoprefixer": "^10.4.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.7"
   }
 }

@@ -1,0 +1,14 @@
+/* Set font sizes */
+html {
+  font-size: 16px;
+}
+@screen sm {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
