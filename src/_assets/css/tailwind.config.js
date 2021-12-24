@@ -27,7 +27,10 @@ module.exports = {
         'xl': '1024px',
       },
     },
-    fontFamily: {},
+    fontFamily: {
+      title: ['"Arima Madurai"', 'sans-serif'],
+      prose: ['Martel', 'serif'],
+    },
     screens: {
       'xs': '480px',
       'sm': '768px',
@@ -37,7 +40,27 @@ module.exports = {
     },
     extend: {
       maxWidth: theme => theme('width'),
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              marginBottom: 0,
+            },
+            figure: {
+              figcaption: {
+                color: theme('colors.brand[dark-grey]'),
+                fontSize: '0.75rem',
+              },
+            },
+          },
+        },
+      }),
+      width: {
+        prose: '65ch',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

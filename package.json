@@ -23,6 +23,7 @@
   "homepage": "https://github.com/architchandra/ahilya#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "npm-run-all": "^4.1.5",
     "postcss-import": "^14.0.2",
