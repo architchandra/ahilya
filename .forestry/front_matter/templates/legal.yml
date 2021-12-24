@@ -1,0 +1,13 @@
+---
+label: Legal
+hide_body: true
+fields:
+- name: richText
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html
+  label: Body

@@ -1,0 +1,9 @@
+---
+label: Quote
+hide_body: true
+fields:
+- name: quote
+  type: text
+  config:
+    required: false
+  label: Quote

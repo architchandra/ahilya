@@ -1,0 +1,54 @@
+---
+label: Article
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: date
+  type: datetime
+  config:
+    required: false
+    date_format: DD MMM YYYY
+    time_format: 
+    display_utc: false
+  label: Publication Date
+  description: By default, the creation date of this entry will be used.
+  default: now
+- name: banner
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 16
+    label: Image
+  - name: altText
+    type: text
+    config:
+      required: false
+    label: Alt Text
+    description: Textual description of the image for visually impaired users and
+      search engines. <a href="https://supercooldesign.co.uk/blog/how-to-write-good-alt-text"
+      title="How to write good alt text" target="_blank">Read more</a>.
+  - name: caption
+    type: text
+    config:
+      required: false
+    label: Caption
+  label: Featured Image
+- name: body
+  type: blocks
+  template_types:
+  - heading
+  - subHeading
+  - text
+  - image
+  - quote
+  config:
+    min: 
+    max: 
+  label: Body

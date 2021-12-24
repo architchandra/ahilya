@@ -1,0 +1,71 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: src/_assets/admin
+webhook_url: 
+sections:
+- type: heading
+  label: Entries
+- type: directory
+  path: src/blog
+  label: Blog
+  create: documents
+  match: "**/*.md"
+  exclude: "{.keep,index.md}"
+  templates:
+  - article
+- type: heading
+  label: Listings
+- type: document
+  path: src/blog/index.md
+  label: Blog Listing
+  templates:
+  - listing
+- type: heading
+  label: Landing Pages
+- type: document
+  path: src/index.md
+  label: Home
+  templates:
+  - home
+- type: document
+  path: src/about.md
+  label: About
+  templates:
+  - landing
+- type: heading
+  label: Menus
+- type: document
+  path: src/_data/menus/header.yml
+  label: Header
+  templates:
+  - header
+- type: document
+  path: src/_data/menus/footer.yml
+  label: Footer
+  templates:
+  - footer
+- type: heading
+  label: Legal
+- type: document
+  path: src/legal/terms.md
+  label: Terms & Conditions
+  templates:
+  - legal
+- type: document
+  path: src/legal/privacy.md
+  label: Privacy Policy
+  templates:
+  - legal
+upload_dir: src/_assets/media
+public_path: "/media"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":year:/:month:/:filename:"
+build:
+  preview_output_directory: public
+  install_dependencies_command: npm ci
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run preview

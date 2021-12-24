@@ -1,0 +1,15 @@
+---
+label: Manual Link
+hide_body: true
+fields:
+- name: target
+  type: text
+  config:
+    required: true
+    min: 5
+  label: URL
+- name: label
+  type: text
+  config:
+    required: true
+  label: Label

@@ -1,0 +1,24 @@
+---
+label: Header
+hide_body: true
+fields:
+- name: logo
+  type: file
+  config:
+    maxSize: 16
+  label: Logo
+- name: navigation
+  type: blocks
+  label: Navigation
+  template_types:
+  - manualLink
+  config:
+    min: 
+    max: 4
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title - FOR BACKEND ONLY
+  hidden: true
+  default: Header - DO NOT SELECT

@@ -1,0 +1,21 @@
+---
+label: Reference Link
+hide_body: true
+fields:
+- name: target
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: ''
+  label: Page
+  description: Select an existing page.
+- name: label
+  type: text
+  config:
+    required: false
+  label: Label
+  description: If empty, the selected page's title will be used as the link's label.

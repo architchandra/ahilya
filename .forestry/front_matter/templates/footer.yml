@@ -1,0 +1,19 @@
+---
+label: Footer
+hide_body: true
+fields:
+- name: navigation
+  type: blocks
+  label: Navigation
+  template_types:
+  - manualLink
+  config:
+    min: 
+    max: 2
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title - FOR BACKEND ONLY
+  hidden: true
+  default: Footer - DO NOT SELECT

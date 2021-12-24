@@ -1,0 +1,9 @@
+---
+label: Sub-Heading
+hide_body: true
+fields:
+- name: subHeading
+  type: text
+  config:
+    required: false
+  label: Sub-Heading

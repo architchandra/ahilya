@@ -1,0 +1,21 @@
+---
+label: Landing
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: body
+  type: blocks
+  label: Body
+  template_types:
+  - heading
+  - subHeading
+  - text
+  - image
+  - quote
+  config:
+    min: 
+    max: 
