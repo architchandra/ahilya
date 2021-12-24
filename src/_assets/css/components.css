@@ -1,0 +1,35 @@
+/* Icons */
+.icon {
+  @apply bg-no-repeat;
+}
+.icon-hamburger {
+  background-image: url("../icons/hamburger.svg");
+}
+
+
+
+/* Toggle Menu */
+.toggle-trigger {
+  @apply cursor-pointer block;
+}
+.toggle-controller { @apply sr-only; }
+.toggle-content {
+  opacity: 1;
+  overflow: visible;
+  transform-origin: top center;
+  transform: scaleY(1);
+  transition: all 0.2s ease-in-out;
+}
+.toggle-controller:not(:checked) ~ .toggle-content {
+  opacity: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+}
+@responsive {
+  .toggle-hidden { @apply hidden; }
+  .toggle-content-visible {
+    opacity: 1 !important;
+    overflow: visible !important;
+    transform: scaleY(1) !important;
+  }
+}

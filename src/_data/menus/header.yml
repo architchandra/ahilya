@@ -1,0 +1,10 @@
+---
+title: Header - DO NOT SELECT
+logo: ""
+navigation:
+- template: manualLink
+  target: "/about"
+  label: About
+- template: manualLink
+  target: "/blog"
+  label: Blog

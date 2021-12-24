@@ -1,0 +1,9 @@
+---
+title: Footer - DO NOT SELECT
+navigation:
+- template: manualLink
+  target: "/terms"
+  label: Terms & Conditions
+- template: manualLink
+  target: "/privacy"
+  label: Privacy Policy

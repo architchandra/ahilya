@@ -1,0 +1,25 @@
+{% set footerNavItemsList = menus.footer.navigation %}
+
+
+
+<footer class="container py-8 border-t text-brand-dark-grey border-brand-grey">
+  <div class="flex flex-col sm:flex-row justify-between text-sm text-center sm:text-left">
+    <p class="order-2 sm:order-1 sm:pr-4 sm:max-w-1/2 font-title">
+      Copyright @2021 Archit Chandra.
+      <span class="block sm:inline">
+        All rights reserved.
+      </span>
+    </p>
+    {% if footerNavItemsList|length %}
+      <ul class="sm:flex sm:justify-end order-1 mb-6 sm:mb-0 sm:pl-4 sm:max-w-1/2">
+        {% for item in footerNavItemsList %}
+          <li class="mb-1 last:mb-0 sm:pl-4 sm:first:pl-0">
+            <a class="hover:underline" href="{{ item.target }}">
+              {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</footer>

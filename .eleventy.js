@@ -1,4 +1,11 @@
+const yaml = require("js-yaml");
+
+
+
 module.exports = function (config) {
+  // Use YAML for data files
+  config.addDataExtension("yml", contents => yaml.load(contents));
+  
   config.addPassthroughCopy({ 'src/_assets/media': 'media' });
   config.addPassthroughCopy({ 'src/_assets/icons': 'icons' });
   
