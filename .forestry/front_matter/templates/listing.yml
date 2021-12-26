@@ -15,7 +15,7 @@ fields:
   type: text
   config:
     required: false
-  label: Title
+  label: Title - FOR BACKEND ONLY
   hidden: true
   default: ''
 - name: handle
