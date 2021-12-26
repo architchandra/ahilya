@@ -18,10 +18,3 @@ fields:
   label: Title
   hidden: false
   default: ''
-- name: handle
-  type: text
-  config:
-    required: false
-  label: Eleventy Collection Handle
-  hidden: true
-  default: blog
