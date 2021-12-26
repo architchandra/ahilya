@@ -24,9 +24,12 @@ layout: layouts/base
 
 {% set homeEntries = collections[homeCollectionHandle]|reverse %}
 {% if homeEntries|length %}
+  {% set homeEntriesFirst = homeEntries|first %}
+  {% set homeEntriesPluralName = homeEntriesFirst.data.pluralName %}
+
   <article class="container max-w-prose my-20 sm:my-24">
     <h2 class="title-h2 mb-8 text-center">
-      Latest Activities
+      Latest {{ homeEntriesPluralName }}
     </h2>
 
     {% set listerParams = {
@@ -37,7 +40,7 @@ layout: layouts/base
     {% include 'components/lister.njk' %}
 
     <a class="inline-block pr-7h title-h4 uppercase icon icon-arrow-right bg-almost-right-top bg-h-5 hover:bg-right-top transition-all duration-300" href="/blog">
-      See more blog posts
+      See more {{ homeEntriesPluralName }}
     </a>
   </article>
 {% endif %}
