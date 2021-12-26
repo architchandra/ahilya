@@ -18,3 +18,10 @@ fields:
   label: Title - FOR BACKEND ONLY
   hidden: true
   default: Listing
+- name: handle
+  type: text
+  config:
+    required: false
+  label: Eleventy Collection Handle
+  hidden: true
+  default: blog
