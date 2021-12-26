@@ -18,7 +18,7 @@ layout: layouts/base
   {% endif %}
 </article>
 
-{% set homeEntries = collections.activities|reverse %}
+{% set homeEntries = collections.blog|reverse %}
 {% if homeEntries|length %}
   <article class="container max-w-prose my-20 sm:my-24">
     <h2 class="title-h2 mb-8 text-center">

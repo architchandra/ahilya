@@ -1,0 +1,69 @@
+---
+layout: layouts/base
+---
+
+
+
+<article class="container">
+  <div class="prose mb-12 {{ 'max-w-none' if banner.image else 'mx-auto' }}">
+    {% if title %}
+      <h1>
+        {{ title }}
+      </h1>
+    {% endif %}
+  
+    {% if date %}
+      <h5 class="mt-2">
+        <time class="text-sm font-normal text-brand-dark-grey" datetime="{{ date|dateTime }}">
+          {% if date %}
+            {{ date|postDate }}
+          {% endif %}
+        </time>
+      </h5>
+    {% endif %}
+  </div>
+
+  {% if banner.image %}
+    <div class="prose max-w-none mb-12 sm:mb-16">
+      <figure>
+        <img class="rounded-md" src="{{ banner.image }}" alt="{{ banner.altText }}" title="{{ banner.altText }}">
+        <figcaption class="font-prose">
+          {{ banner.caption }}
+        </figcaption>
+      </figure>
+    </div>
+  {% endif %}
+
+  <div class="prose mx-auto">
+    {% if body|length %}
+      {% for block in body %}
+        {% set blockType = block.template %}
+        {% switch blockType %}
+          {% case 'heading' %}
+            <h2>
+              {{ block.heading }}
+            </h2>
+          {% case 'subHeading' %}
+            <h3>
+              {{ block.subHeading }}
+            </h3>
+          {% case 'text' %}
+            <p class="font-prose">
+              {{ block.text|safe }}
+            </p>
+          {% case 'image' %}
+            <figure>
+              <img class="rounded-md" src="{{ block.image }}" alt="{{ block.altText }}" title="{{ block.altText }}">
+              <figcaption class="font-prose">
+                {{ block.caption }}
+              </figcaption>
+            </figure>
+          {% case 'quote' %}
+            <blockquote class="font-prose">
+              {{ block.quote }}
+            </blockquote>
+        {% endswitch %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</article>

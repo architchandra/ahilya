@@ -1,0 +1,23 @@
+{% set teaserEntry = entry if entry else null %}
+{% set teaserHeadingLevel = teaserHeadingLevel if teaserHeadingLevel else 'h2' %}
+{% set teaserDate = teaserEntry.data.date %}
+
+
+
+{% if teaserEntry %}
+  <article>
+    <a class="block pt-5 pb-4" href="{{ teaserEntry.url }}">
+      <{{ teaserHeadingLevel }} class="title-h4">
+        {{ teaserEntry.data.title }}
+      </{{ teaserHeadingLevel }}>
+
+      {% if teaserDate %}
+        <h5>
+          <time class="text-sm font-normal text-brand-dark-grey" datetime="{{ teaserDate|dateTime }}">
+            {{ teaserDate|postDate }}
+          </time>
+        </h5>
+      {% endif %}
+    </a>
+  </article>
+{% endif %}

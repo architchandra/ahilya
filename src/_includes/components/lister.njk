@@ -1,0 +1,37 @@
+{# components/lister #}
+{# Lists items in the specified view #}
+
+
+
+{# Params #}
+{% set listerEntriesList = listerParams.entries if listerParams.entries else [] %}
+{% set listerView = listerParams.view if listerParams.view else 'teaser' %}
+{% set listerClass = listerParams.class if listerParams.class else '' %}
+{% set listerLimit = listerParams.limit if listerParams.limit else listerEntriesList|length %}
+
+
+
+{# Variables #}
+{% set _listerClass = {
+  teaser: {
+    item: 'first:-mt-5'
+  },
+  banner: {
+    item: 'first:-mt-9 sm:first:-mt-5'
+  }
+} %}
+
+
+
+{# Output #}
+{% if listerEntriesList %}
+  <ul class="{{ listerClass }}">
+    {% for entry in listerEntriesList %}
+      {% if loop.index0 < listerLimit %}
+        <li class="border-b border-brand-grey {{ _listerClass[listerView].item }}">
+          {% include 'views/' + listerView + '/default.njk' %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
