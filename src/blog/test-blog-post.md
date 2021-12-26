@@ -11,5 +11,7 @@ body:
 - template: text
   text: Gallia est omnis divisa in partes tres, quarum. Vivamus sagittis lacus vel
     augue laoreet rutrum faucibus. Inmensae subtilitatis, obscuris et malesuada fames.
+- template: quote
+  quote: 'Idque Caesaris facere voluntate liceret: sese habere.'
 
 ---
