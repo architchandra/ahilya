@@ -39,7 +39,17 @@ module.exports = {
       'xl': '1536px',
     },
     extend: {
+      backgroundPosition: {
+        'almost-right-top': '98% top',
+      },
+      backgroundSize: {
+        'h-5': 'auto 1.25rem',
+        'h-8': 'auto 2rem',
+      },
       maxWidth: theme => theme('width'),
+      spacing: {
+        '7h': '1.875rem',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

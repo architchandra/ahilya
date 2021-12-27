@@ -941,6 +941,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../icons/hamburger.svg");
 }
 
+.icon-arrow-right {
+  background-image: url("../icons/arrow-right.svg");
+}
+
 /* Toggle Menu */
 
 .toggle-trigger {
@@ -1128,6 +1132,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(253 249 243 / var(--tw-bg-opacity));
 }
 
+.bg-h-8 {
+  background-size: auto 2rem;
+}
+
+.bg-h-5 {
+  background-size: auto 1.25rem;
+}
+
+.bg-almost-right-top {
+  background-position: 98% top;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1152,6 +1168,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pr-7h {
+  padding-right: 1.875rem;
 }
 
 .text-center {
