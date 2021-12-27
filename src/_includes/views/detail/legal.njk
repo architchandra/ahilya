@@ -1,0 +1,23 @@
+---
+layout: layouts/base
+---
+
+
+
+<article class="container">
+  <div class="prose mx-auto">
+    {% if title %}
+      <div class="mb-8">
+        <h1>
+          {{ title }}
+        </h1>
+      </div>
+    {% endif %}
+
+    {% if richText %}
+      <div class="font-prose">
+        {{ richText|safe }}
+      </div>
+    {% endif %}
+  </div>
+</article>
