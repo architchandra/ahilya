@@ -9,6 +9,7 @@ module.exports = function (config) {
   
   config.addPassthroughCopy({ 'src/_assets/media': 'media' });
   config.addPassthroughCopy({ 'src/_assets/icons': 'icons' });
+  config.addPassthroughCopy({ 'src/_assets/admin': 'admin'});
   
   // Check the robots.txt file before deploying to production
   config.addPassthroughCopy('src/robots.txt');
