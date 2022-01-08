@@ -14,5 +14,11 @@ body:
     content.
 - template: quote
   quote: 'Idque Caesaris facere voluntate liceret: sese habere.'
+- template: subHeading
+  subHeading: ''
+- template: image
+  altText: Ok
+  caption: Not ok
+  image: "/media/2021/12/road.jpg"
 
 ---
