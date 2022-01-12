@@ -978,18 +978,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: scaleY(0);
 }
 
-@responsive {
-  .toggle-hidden {
-    display: none;
-  }
-
-  .toggle-content-visible {
-    opacity: 1 !important;
-    overflow: visible !important;
-    transform: scaleY(1) !important;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
