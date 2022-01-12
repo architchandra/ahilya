@@ -9,7 +9,7 @@
     "start": "npm-run-all --parallel watch:*",
     "preview": "npm run watch:eleventy",
     "deploy": "eleventy",
-    "deplpy:github": "ENV=production eleventy --pathprefix=ahilya"
+    "deploy:github": "eleventy --pathprefix=ahilya"
   },
   "repository": {
     "type": "git",
