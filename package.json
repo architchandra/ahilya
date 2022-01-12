@@ -8,7 +8,8 @@
     "watch:tailwind": "tailwind -i src/_assets/css/main.css -c src/_assets/css/tailwind.config.js --postcss -o web/build/style.css --watch",
     "start": "npm-run-all --parallel watch:*",
     "preview": "npm run watch:eleventy",
-    "deploy": "eleventy"
+    "deploy": "eleventy",
+    "deplpy:github": "ENV=production eleventy --pathprefix=ahilya"
   },
   "repository": {
     "type": "git",
