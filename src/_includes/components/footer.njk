@@ -14,7 +14,7 @@
       <ul class="sm:flex sm:justify-end order-1 mb-6 sm:mb-0 sm:pl-4 sm:max-w-1/2">
         {% for item in footerNavItemsList %}
           <li class="mb-1 last:mb-0 sm:pl-4 sm:first:pl-0">
-            <a class="hover:underline" href="{{ item.target }}">
+            <a class="hover:underline" href="{{ item.target|url }}">
               {{ item.label }}
             </a>
           </li>

@@ -6,7 +6,7 @@
 
 {% if teaserEntry %}
   <article>
-    <a class="block pt-5 pb-4" href="{{ teaserEntry.url }}">
+    <a class="block pt-5 pb-4" href="{{ teaserEntry.url|url }}">
       <{{ teaserHeadingLevel }} class="title-h4">
         {{ teaserEntry.data.title }}
       </{{ teaserHeadingLevel }}>

@@ -34,7 +34,7 @@
           <ul class="flex flex-col sm:flex-row sm:justify-end sm:items-center sm:flex-wrap">
             {% for item in headerNavItemsList %}
               <li class="sm:ml-4">
-                <a class="block py-4 sm:py-0 container sm:mx-0 sm:px-0 no-underline sm:bg-transparent border-b sm:border-none border-brand-grey hover:underline" href="{{ item.target }}">
+                <a class="block py-4 sm:py-0 container sm:mx-0 sm:px-0 no-underline sm:bg-transparent border-b sm:border-none border-brand-grey hover:underline" href="{{ item.target|url }}">
                   {{ item.label }}
                 </a>
               </li>
